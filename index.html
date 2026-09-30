@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GG Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">GG GAMES</a>
+    <nav>
+      <a href="#new">NEW CONTENT</a>
+      <a href="#featured">FEATURED</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <button class="icon-btn" title="Configuración" onclick="document.body.classList.toggle('high-contrast')">⚙</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">MINECRAFT BEDROCK</p>
+      <h1>NEW CONTENT</h1>
+      <p class="hero-text">Add-ons, maps and creations from GG Games.</p>
+    </section>
+
+    <section id="new" class="content-section">
+      <div class="section-title"><h2>NEW CONTENT</h2><span id="newCount"></span></div>
+      <div id="newGrid" class="grid"><div class="loading">LOADING...</div></div>
+    </section>
+
+    <section id="featured" class="content-section">
+      <div class="section-title"><h2>FEATURED ADD-ONS</h2></div>
+      <div id="featuredGrid" class="grid"><div class="loading">LOADING...</div></div>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <p class="eyebrow">GG STUDIOS</p>
+        <h2>Made for Bedrock.</h2>
+        <p>Un pequeño portal para publicar tus propios add-ons, mapas y archivos descargables.</p>
+      </div>
+      <a class="gold-btn" href="admin.html">ADMIN PANEL</a>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> GG Games</footer>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
