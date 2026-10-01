@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GG Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">GG GAMES</a>
+    <nav>
+      <a href="#new" data-i18n="navNew">NEW CONTENT</a>
+      <a href="#featured" data-i18n="navFeatured">FEATURED</a>
+      <a href="#about" data-i18n="navAbout">ABOUT</a>
+    </nav>
+    <button id="settingsBtn" class="icon-btn" title="Ajustes" aria-label="Ajustes">⚙</button>
+  </header>
+
+  <div id="settingsPanel" class="settings-panel hidden">
+    <h3 data-i18n="settingsTitle">AJUSTES</h3>
+    <label class="set-row"><span data-i18n="lang">Idioma</span>
+      <select id="langSelect"><option value="es">Español</option><option value="en">English</option></select>
+    </label>
+    <div class="set-row"><span data-i18n="fontSize">Tamaño de letra</span>
+      <div class="size-btns">
+        <button class="size-btn" data-size="sm" type="button">A</button>
+        <button class="size-btn" data-size="md" type="button">A</button>
+        <button class="size-btn" data-size="lg" type="button">A</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">MINECRAFT BEDROCK</p>
+      <h1 data-i18n="heroTitle">NEW CONTENT</h1>
+      <p class="hero-text" data-i18n="heroText">Add-ons, maps and creations from GG Games.</p>
+    </section>
+
+    <section id="new" class="content-section">
+      <div class="section-title"><h2 data-i18n="newTitle">NEW CONTENT</h2><span id="newCount"></span></div>
+      <div id="newGrid" class="grid"><div class="loading">LOADING...</div></div>
+    </section>
+
+    <section id="featured" class="content-section">
+      <div class="section-title"><h2 data-i18n="featuredTitle">FEATURED ADD-ONS</h2></div>
+      <div id="featuredGrid" class="grid"><div class="loading">LOADING...</div></div>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <p class="eyebrow">GG STUDIOS</p>
+        <h2 data-i18n="aboutTitle">Made for Bedrock.</h2>
+        <p data-i18n="aboutText">Un pequeño portal para publicar nuestros add-ons, mapas y archivos descargables.</p>
+      </div>
+      <a class="gold-btn" href="admin.html" data-i18n="adminBtn">ADMIN PANEL</a>
+    </section>
+  </main>
+
+  <footer>
+    <a id="discordLink" class="discord-link hidden" href="#" target="_blank" rel="noopener noreferrer" data-i18n="discord">Únete a nuestro Discord</a>
+    <span>© <span id="year"></span> GG Games</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
